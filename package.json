@@ -1,0 +1,44 @@
+{
+  "name": "electron-updater",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build-main && concurrently \"vite\" \"cross-env NODE_ENV=development electron .\"",
+    "build": "vite build",
+    "build-main": "tsc main.ts --outDir dist --module NodeNext --target es2020 --moduleResolution nodenext --esModuleInterop --skipLibCheck",
+    "start": "npm run build-main && cross-env NODE_ENV=production electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build":{
+    "publish": {
+      "provider": "github",
+      "owner": "nurssiuu",
+      "repo": "https://github.com/nurssiuu/autoUpdate.git"
+    },
+    "appId": "com.nurssiuu.autoupdate", 
+    "productName": "AutoUpdateApp",
+    "win": {
+      "target" : "nsis"
+    }, 
+      "directories" :{
+      "output": "dist"
+      
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "concurrently": "^9.2.1",
+    "cross-env": "^7.0.3",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.4.0",
+    "electron-updater": "^6.7.3",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "typescr
