@@ -8,7 +8,8 @@
     "build": "vite build",
     "build-main": "tsc main.ts --outDir dist --module NodeNext --target es2020 --moduleResolution nodenext --esModuleInterop --skipLibCheck",
     "start": "npm run build-main && cross-env NODE_ENV=production electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "electron-builder --publish always"
   },
   "build":{
     "publish": {
