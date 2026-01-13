@@ -41,4 +41,6 @@
     "electron-updater": "^6.7.3",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "typescr
+    "typescript": "^5.2.2"
+    }
+  }
